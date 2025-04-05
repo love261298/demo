@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { PrimeNGConfig } from 'primeng/api';
+import { SideMenuComponent } from './components/menu/side-menu/side-menu.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,15 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'ten-du-an';
+  @ViewChild(SideMenuComponent) sideMenu!: SideMenuComponent;
+  moved: boolean = false;
+  constructor(private primengConfig: PrimeNGConfig) {
+  }
+  isOpen() {
+    this.sideMenu.isOpen = !this.sideMenu.isOpen;
+    this.moved = !this.moved
+  }
+  ngOnInit() {
+    this.primengConfig.ripple = true;
+  }
 }

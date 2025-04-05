@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    font-size: 10px;
+    --font-color: #505969;
+    --hover-color: #6366f1;
+    --hover-color-bold: #4338ca;
+    --color-white: #ffffff;
+    --background-color: #f1f5f9;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
