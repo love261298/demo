@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ImportPrimengModule } from './common/import-primeng.module';
-import { MenuModule } from './components/menu/menu.module';
+import { MenuModule } from './components/menu.module';
 
 @NgModule({
   declarations: [

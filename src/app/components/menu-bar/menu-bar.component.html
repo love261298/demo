@@ -6,12 +6,14 @@
     <ul>
         <li>
             <p-iconField iconPosition="left">
-                <p-inputIcon styleClass="pi pi-search" [style]="{width: '14px'}"/>
+                <p-inputIcon styleClass="pi pi-search" [style]="{width: '14px'}" />
                 <input type="text" pInputText placeholder="Search" />
             </p-iconField>
         </li>
-        <li class="pi pi-palette"></li>
-        <li><p-avatar [style]="{width: '35px', height: '35px'}"
+        <li (click)="sideColor.isOpen = !sideColor.isOpen" class="pi pi-palette"></li>
+        <li (click)="sideInfo.isOpen = !sideInfo.isOpen"><p-avatar [style]="{width: '35px', height: '35px'}"
                 image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" shape="circle" /></li>
     </ul>
 </div>
+<app-side-color></app-side-color>
+<app-side-right-info></app-side-right-info>

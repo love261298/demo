@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
-import { SideMenuComponent } from './components/menu/side-menu/side-menu.component';
+import { SideMenuComponent } from './components/side-menu/side-menu.component';
 
 @Component({
   selector: 'app-root',

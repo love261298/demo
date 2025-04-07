@@ -1,0 +1,116 @@
+<p-sidebar #sidebarRef [(visible)]="isOpen" [style]="{width:'278PX'}" position="right">
+    <ng-template pTemplate="headless">
+        <div class="sideBarInfo">
+            <div (click)="close($event)">
+                <span>
+                    <i class="pi pi-times"></i>
+                </span>
+            </div>
+            <div>
+                <div class="card">
+                    <div>
+                        <h1>Welcome</h1>
+                        <h2>Isabella Andolini</h2>
+                    </div>
+                    <ul>
+                        <li>
+                            <span><i class="pi pi-user"></i></span>
+                            <div>
+                                <span>Profile</span>
+                                <p>Lorem ipsum date visale</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span><i class="pi pi-money-bill"></i></span>
+                            <div>
+                                <span>Billing</span>
+                                <p>Amet mimin mıollit</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span><i class="pi pi-cog"></i></span>
+                            <div>
+                                <span>Settings</span>
+                                <p>Exercitation veniam</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span><i class="pi pi-power-off"></i></span>
+                            <div>
+                                <span>Sign Out</span>
+                                <p>Sed ut perspiciatis</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div>
+                        <h1>Notifications</h1>
+                        <h2>You have 3 notifications</h2>
+                    </div>
+                    <ul>
+                        <li>
+                            <span><i class="pi pi-user"></i></span>
+                            <div>
+                                <span>Your post has new comments</span>
+                                <p>5 min ago</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span><i class="pi pi-trash"></i></span>
+                            <div>
+                                <span>Your post has been deleted</span>
+                                <p>15min ago</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span><i class="pi pi-folder"></i></span>
+                            <div>
+                                <span>Post has been updated</span>
+                                <p>3h ago</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div>
+                        <h1>Messages</h1>
+                        <h2>You have new messages</h2>
+                    </div>
+                    <ul>
+                        <li>
+                            <span><p-avatar [style]="{width: '28px', height: '28px'}"
+                                    image="https://primefaces.org/cdn/primeng/images/demo/avatar/onyamalimba.png"
+                                    styleClass="mr-2" shape="circle" /></span>
+                            <div>
+                                <span>Profile</span>
+                                <p>Lorem ipsum date visale</p>
+                            </div>
+                            <span>3</span>
+                        </li>
+                        <li>
+                            <span><p-avatar [style]="{width: '28px', height: '28px'}"
+                                    image="https://primefaces.org/cdn/primeng/images/galleria/galleria10.jpg"
+                                    styleClass="mr-2" shape="circle" /></span>
+                            <div>
+                                <span>Profile</span>
+                                <p>Lorem ipsum date visale</p>
+                            </div>
+                            <span>1</span>
+                        </li>
+                        <li>
+                            <span><p-avatar [style]="{width: '28px', height: '28px'}"
+                                    image="https://primefaces.org/cdn/primeng/images/demo/avatar/walter.jpg"
+                                    styleClass="mr-2" shape="circle" /></span>
+                            <div>
+                                <span>Profile</span>
+                                <p>Lorem ipsum date visale</p>
+                            </div>
+                            <span>2</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</p-sidebar>
