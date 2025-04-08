@@ -8,6 +8,11 @@
     --background-color: #f1f5f9;
 }
 
+* {
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
 html {
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
 }

@@ -3,9 +3,9 @@
     <app-side-menu></app-side-menu>
   </div>
   <div class="layout-wrapper" [class.moved]="moved">
-      <app-menu-bar (menuBar)="isOpen()"></app-menu-bar>
+    <app-menu-bar (menuBar)="isOpen()"></app-menu-bar>
     <div>
-      dashboard
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

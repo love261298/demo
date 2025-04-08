@@ -9,6 +9,12 @@ import { InputTextModule } from 'primeng/inputtext';
 import { AvatarModule } from 'primeng/avatar';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
+import { PanelMenuModule } from 'primeng/panelmenu';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { SelectButtonModule } from 'primeng/selectbutton';
+import { ChartModule } from 'primeng/chart';
+import { KnobModule } from 'primeng/knob';
+import { DropdownModule } from 'primeng/dropdown';
 @NgModule({
   declarations: [],
   imports: [
@@ -21,7 +27,13 @@ import { InputIconModule } from 'primeng/inputicon';
     InputTextModule,
     AvatarModule,
     IconFieldModule,
-    InputIconModule
+    InputIconModule,
+    PanelMenuModule,
+    RadioButtonModule,
+    SelectButtonModule,
+    ChartModule,
+    KnobModule,
+    DropdownModule
   ],
   exports: [
     CommonModule,
@@ -33,7 +45,13 @@ import { InputIconModule } from 'primeng/inputicon';
     InputTextModule,
     AvatarModule,
     IconFieldModule,
-    InputIconModule
+    InputIconModule,
+    PanelMenuModule,
+    RadioButtonModule,
+    SelectButtonModule,
+    ChartModule,
+    KnobModule,
+    DropdownModule
   ]
 })
 export class ImportPrimengModule { }

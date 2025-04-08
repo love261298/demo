@@ -1,11 +1,13 @@
 .layout-wrapper {
-    transition: margin-left 150ms cubic-bezier(0, 0, 0.2, 1);
+    transition: margin-left 500ms cubic-bezier(0, 0, 0.2, 1);
     padding: 28px;
     flex: 1;
     min-height: 100vh;
     box-sizing: border-box;
+    margin-left: 252px;
+    background-color: var(--background-color);
 }
 
 .moved {
-    margin-left: 252px;
+    margin-left: 0;
 }

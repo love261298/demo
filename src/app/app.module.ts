@@ -4,7 +4,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ImportPrimengModule } from './common/import-primeng.module';
-import { MenuModule } from './components/menu.module';
+import { MenuModule } from './layout/menu.module';
+import { ECommerceModule } from './components/e-commerce/e-commerce.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { MenuModule } from './components/menu.module';
     BrowserAnimationsModule,
     ImportPrimengModule,
     MenuModule,
+    ECommerceModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

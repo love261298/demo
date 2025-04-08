@@ -11,7 +11,7 @@ export class MenuBarComponent {
   @Output() menuBar = new EventEmitter<void>();
   @ViewChild(SideColorComponent) sideColor!: SideColorComponent;
   @ViewChild(SideRightInfoComponent) sideInfo!: SideRightInfoComponent;
-  isOpen: boolean = false;
+  isOpen: boolean = true;
   handlerOpen() {
     this.isOpen = !this.isOpen;
     this.menuBar.emit();

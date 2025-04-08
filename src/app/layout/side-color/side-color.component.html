@@ -1,0 +1,192 @@
+<p-sidebar #sidebarRef [(visible)]="isOpen" [style]="{width:'278PX'}" position="right"
+    transitionOptions='500ms cubic-bezier(0, 0, 0.2, 1)'>
+    <ng-template pTemplate="headless">
+        <div class="sideBarColor">
+            <div (click)="close('11')">
+                <span>Settings</span>
+                <span>
+                    <i class="pi pi-times"></i>
+                </span>
+            </div>
+            <div>
+                <div>
+                    <span>Primary</span>
+                    <div>
+                        <div style="background-color: #334155;" (click)="handlePrimaryColor('1')"
+                            [ngStyle]="primaryColor === '1' ? {'outline-color': '#334155'} : {}"
+                            [ngClass]="{ 'active': primaryColor==='1' }"></div>
+                        <div style="background-color: #10b981;" (click)="handlePrimaryColor('2')"
+                            [ngStyle]="primaryColor === '2' ? {'outline-color': '#10b981'} : {}"
+                            [ngClass]="{ 'active': primaryColor==='2' }"></div>
+                        <div style="background-color: #22c55e;" (click)="handlePrimaryColor('3')"
+                            [ngStyle]="primaryColor === '3' ? {'outline-color': '#22c55e'} : {}"
+                            [ngClass]="{ 'active': primaryColor==='3' }"></div>
+                        <div style="background-color: #84cc16;" (click)="handlePrimaryColor('4')"
+                            [ngStyle]="primaryColor === '4' ? {'outline-color': '#84cc16'} : {}"
+                            [ngClass]="{ 'active': primaryColor==='4' }"></div>
+                        <div style="background-color: #f97316;" (click)="handlePrimaryColor('5')"
+                            [ngStyle]="primaryColor === '5' ? {'outline-color': '#f97316'} : {}"
+                            [ngClass]="{ 'active': primaryColor==='5' }"></div>
+                        <div style="background-color: #f59e0b;" (click)="handlePrimaryColor('6')"
+                            [ngStyle]="primaryColor === '6' ? {'outline-color': '#f59e0b'} : {}"
+                            [ngClass]="{ 'active': primaryColor==='6' }"></div>
+                        <div style="background-color: #eab308;" (click)="handlePrimaryColor('7')"
+                            [ngStyle]="primaryColor === '7' ? {'outline-color': '#eab308'} : {}"
+                            [ngClass]="{ 'active': primaryColor==='7' }"></div>
+                        <div style="background-color: #14b8a6;" (click)="handlePrimaryColor('8')"
+                            [ngStyle]="primaryColor === '8' ? {'outline-color': '#14b8a6'} : {}"
+                            [ngClass]="{ 'active': primaryColor==='8' }"></div>
+                        <div style="background-color: #06b6d4;" (click)="handlePrimaryColor('9')"
+                            [ngStyle]="primaryColor === '9' ? {'outline-color': '#06b6d4'} : {}"
+                            [ngClass]="{ 'active': primaryColor==='9' }"></div>
+                        <div (click)="handlePrimaryColor('10')"
+                            [ngStyle]="primaryColor === '10' ? {'outline-color': '#0ea5e9'} : {}"
+                            [ngClass]="{ 'active': primaryColor==='10' }"></div>
+                        <div style="background-color: #3b82f6;" (click)="handlePrimaryColor('11')"
+                            [ngStyle]="primaryColor === '11' ? {'outline-color': '#3b82f6'} : {}"
+                            [ngClass]="{ 'active': primaryColor==='11' }"></div>
+                        <div style="background-color: #8b5cf6;" (click)="handlePrimaryColor('12')"
+                            [ngStyle]="primaryColor === '12' ? {'outline-color': '#8b5cf6'} : {}"
+                            [ngClass]="{ 'active': primaryColor==='12' }"></div>
+                        <div style="background-color: #a855f7;" (click)="handlePrimaryColor('13')"
+                            [ngStyle]="primaryColor === '13' ? {'outline-color': '#a855f7'} : {}"
+                            [ngClass]="{ 'active': primaryColor==='13' }"></div>
+                        <div style="background-color: #d946ef;" (click)="handlePrimaryColor('14')"
+                            [ngStyle]="primaryColor === '14' ? {'outline-color': '#d946ef'} : {}"
+                            [ngClass]="{ 'active': primaryColor==='14' }"></div>
+                        <div style="background-color: #ec4899;" (click)="handlePrimaryColor('15')"
+                            [ngStyle]="primaryColor === '15' ? {'outline-color': '#ec4899'} : {}"
+                            [ngClass]="{ 'active': primaryColor==='15' }"></div>
+                        <div style="background-color: #f43f5e;" (click)="handlePrimaryColor('16')"
+                            [ngStyle]="primaryColor === '16' ? {'outline-color': '#f43f5e'} : {}"
+                            [ngClass]="{ 'active': primaryColor==='16' }"></div>
+                        <div style="background-color: #f43f5e;" (click)="handlePrimaryColor('17')"
+                            [ngStyle]="primaryColor === '17' ? {'outline-color': '#f43f5e'} : {}"
+                            [ngClass]="{ 'active': primaryColor==='17' }"></div>
+                    </div>
+                </div>
+                <div>
+                    <span>Surface</span>
+                    <div>
+                        <div style="background-color: #64748b; outline-color: #6366f1;"
+                            (click)="handleSurFaceColor('1')" [ngClass]="{ 'active': surFaceColor==='1' }"></div>
+                        <div style="background-color: #6b7280; outline-color: #6366f1;"
+                            (click)="handleSurFaceColor('2')" [ngClass]="{ 'active': surFaceColor==='2' }"></div>
+                        <div style="background-color: #71717a; outline-color: #6366f1;"
+                            (click)="handleSurFaceColor('3')" [ngClass]="{ 'active': surFaceColor==='3' }"></div>
+                        <div style="background-color: #737373; outline-color: #6366f1;"
+                            (click)="handleSurFaceColor('4')" [ngClass]="{ 'active': surFaceColor==='4' }"></div>
+                        <div style="background-color: #78716c; outline-color: #6366f1;"
+                            (click)="handleSurFaceColor('5')" [ngClass]="{ 'active': surFaceColor==='5' }"></div>
+                        <div style="background-color: #7f8084; outline-color: #6366f1;"
+                            (click)="handleSurFaceColor('6')" [ngClass]="{ 'active': surFaceColor==='6' }"></div>
+                        <div style="background-color: #87898a; outline-color: #6366f1;"
+                            (click)="handleSurFaceColor('7')" [ngClass]="{ 'active': surFaceColor==='7' }"></div>
+                        <div style="background-color: #828787; outline-color: #6366f1;"
+                            (click)="handleSurFaceColor('8')" [ngClass]="{ 'active': surFaceColor==='8' }"></div>
+                    </div>
+                </div>
+                <div>
+                    <span>Presets</span>
+                    <div>
+                        <ul class="box">
+                            <li (click)="handlePresets('1')" [ngClass]="{ 'activeColorScheme': presets==='1' }">Aura
+                            </li>
+                            <li (click)="handlePresets('2')" [ngClass]="{ 'activeColorScheme': presets==='2' }">Lara
+                            </li>
+                            <li (click)="handlePresets('3')" [ngClass]="{ 'activeColorScheme': presets==='3' }">Nora
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <span>Color Scheme</span>
+                    <div>
+                        <ul class="box">
+                            <li (click)="handleColorScheme('1')" [ngClass]="{ 'activeColorScheme': colorScheme==='1' }">
+                                Aura
+                            </li>
+                            <li (click)="handleColorScheme('2')" [ngClass]="{ 'activeColorScheme': colorScheme==='2' }">
+                                Lara
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <span>Menu Type</span>
+                    <div>
+                        <ul class="radio">
+                            <li>
+                                <label>
+                                    <input type="radio" name="menuType" checked />
+                                    Static
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="menuType" />
+                                    Overlay
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="menuType" />
+                                    Slim
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="menuType" />
+                                    Slim+
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="menuType" />
+                                    Reveal
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="menuType" />
+                                    Drawer
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="menuType" />
+                                    Horizontal
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <span>Menu Theme</span>
+                    <div>
+                        <ul class="radio">
+                            <li style="width: 100%;">
+                                <label>
+                                    <input type="radio" name="menuTheme" checked />
+                                    Color Scheme
+                                </label>
+                            </li>
+                            <li style="width: 100%;">
+                                <label>
+                                    <input type="radio" name="menuTheme" />
+                                    Primary Color
+                                </label>
+                            </li>
+                            <li style="width: 100%;">
+                                <label>
+                                    <input type="radio" name="menuTheme" />
+                                    Transparent
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</p-sidebar>

@@ -1,0 +1,134 @@
+.sideBarColor {
+    height: 100vh;
+    width: 280px;
+
+    &>div:nth-child(1) {
+        padding: 17.5px;
+        cursor: pointer;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &>span:nth-child(1) {
+            color: #334155;
+            font-size: 21px;
+            font-weight: 600;
+        }
+
+        &>span:last-child {
+            &:hover {
+                color: var(--color-white);
+                background-color: var(--font-color);
+                border-radius: 8px;
+            }
+
+            font-size: 14px;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &>:last-child {
+        padding: 0 17.5px 17.5px 17.5px;
+        height: calc(100% - 70px);
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        &>div {
+            &>span {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 23px;
+                display: block;
+            }
+
+            &>div {
+                padding-top: 7px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+
+                &>div {
+                    &:hover {
+                        opacity: 0.8;
+                    }
+
+                    cursor: pointer;
+                    width: 21px;
+                    height: 21px;
+                    border-radius: 50%;
+                    background-color: red;
+                }
+
+                &>.box {
+                    background-color: var(--background-color);
+                    border-radius: 8px;
+                    display: flex;
+                    font-size: 14px;
+                    color: #6b7a90;
+                    padding: 8px;
+
+                    &>li {
+                        display: block;
+                        padding: 7px 14px;
+                        height: 28px;
+                        cursor: pointer;
+                        font-weight: 600;
+
+                        &:hover {
+                            color: var(--font-color);
+                        }
+                    }
+                }
+
+                &>.radio {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    & li {
+                        cursor: pointer;
+                        color: #6b7a90;
+                        font-weight: 600;
+                        font-size: 14px;
+                        display: flex;
+                        flex: 0 0 auto;
+                        width: 50%;
+                        margin-bottom: 8px;
+
+                        &>label {
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                            gap: 12px;
+
+                            &>input[type="radio"] {
+                                cursor: pointer;
+                                width: 21px;
+                                height: 21px;
+                                margin: 0;
+                                accent-color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.active {
+    outline: 2px solid;
+    outline-offset: 2px
+}
+
+.activeColorScheme {
+    background-color: #fff;
+    color: var(--font-color);
+    border-radius: 4px;
+}
