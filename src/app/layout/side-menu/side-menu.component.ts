@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-side-menu',
@@ -13,7 +13,9 @@ export class SideMenuComponent implements OnInit {
       {
         label: 'DASHBOARDS',
         items: [
-          { label: 'E-commerce', icon: 'pi pi-fw pi-home' },
+          {
+            label: 'E-commerce', icon: 'pi pi-fw pi-home'
+          },
           { label: 'Banking', icon: 'pi pi-fw pi-image' },
         ]
       },

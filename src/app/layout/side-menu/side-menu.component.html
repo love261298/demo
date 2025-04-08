@@ -49,7 +49,8 @@
             <ul class="layout-menu">
                 <li *ngFor="let m of model">
                     <span>{{m.label}}</span>
-                    <p-panelMenu [model]="m.items"></p-panelMenu>
+                    <p-panelMenu [model]="m.items">
+                    </p-panelMenu>
                 </li>
             </ul>
         </div>

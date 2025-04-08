@@ -1,11 +1,34 @@
+import { ProductService } from './../../services/product.service';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-e-commerce',
   templateUrl: './e-commerce.component.html',
   styleUrl: './e-commerce.component.scss'
 })
-export class ECommerceComponent {
+export class ECommerceComponent implements OnInit {
+  products!: any;
+  topProducts!: any;
+  constructor(private productService: ProductService) {
+    this.productService.getProducts().then((data) => (this.products = data));
+    this.productService.getProductsMini().then((data) => (this.topProducts = data));
+  }
+  getSeverity(product: any) {
+    switch (product.inventoryStatus) {
+      case 'INSTOCK':
+        return 'success';
+
+      case 'LOWSTOCK':
+        return 'warning';
+
+      case 'OUTOFSTOCK':
+        return 'danger';
+
+      default:
+        return undefined;
+    }
+  };
   options: any;
   data: any;
   value: number = 67;

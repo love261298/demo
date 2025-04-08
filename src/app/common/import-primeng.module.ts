@@ -15,6 +15,8 @@ import { SelectButtonModule } from 'primeng/selectbutton';
 import { ChartModule } from 'primeng/chart';
 import { KnobModule } from 'primeng/knob';
 import { DropdownModule } from 'primeng/dropdown';
+import { DataViewModule } from 'primeng/dataview';
+import { TagModule } from 'primeng/tag';
 @NgModule({
   declarations: [],
   imports: [
@@ -33,7 +35,9 @@ import { DropdownModule } from 'primeng/dropdown';
     SelectButtonModule,
     ChartModule,
     KnobModule,
-    DropdownModule
+    DropdownModule,
+    DataViewModule,
+    TagModule
   ],
   exports: [
     CommonModule,
@@ -51,7 +55,9 @@ import { DropdownModule } from 'primeng/dropdown';
     SelectButtonModule,
     ChartModule,
     KnobModule,
-    DropdownModule
+    DropdownModule,
+    DataViewModule,
+    TagModule
   ]
 })
 export class ImportPrimengModule { }
