@@ -1,0 +1,155 @@
+<div class="banking">
+    <ul>
+        <li>
+            <p-avatar [style]="{width: '56px', height: '56px'}"
+                image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" shape="circle" />
+            <span>
+                <h1>Welcome Isabel</h1>
+                <p>Your last login was on 04/05/2022 at 10:24 am</p>
+            </span>
+        </li>
+        <li>
+            <label class="pi pi-arrows-h">
+            </label>
+            <label class="pi pi-download">
+                <input hidden type="file" />
+            </label>
+            <label class="pi pi-send">
+            </label>
+        </li>
+    </ul>
+    <div>
+        <ul>
+            <li>
+                <div>
+                    <span>Debit Card</span>
+                    <span>Balance</span>
+                    <span>$2.000,00</span>
+                    <span>
+                        <p>**** **** **** 1412</p>
+                        <p>12/26</p>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        <p>Credit Card</p>
+                        <div>
+                            <img style="width: 100%;" height="100%"
+                                src="https://apollo.primeng.org/demo/images/banking/visa.svg" alt="img">
+                        </div>
+                    </span>
+                    <span>Debt</span>
+                    <span>$1.500,00</span>
+                    <span>
+                        <p>**** **** **** 1231</p>
+                        <p>12/24</p>
+                    </span>
+                </div>
+                <div>
+                    <div>
+                        <span><i class="pi pi-dollar"></i></span>
+                        <span>Primary</span>
+                        <span>$24,345.21</span>
+                    </div>
+                    <div>
+                        <span><i class="pi pi-euro"></i></span>
+                        <span>Currency</span>
+                        <span>$10,416.11</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <span>Recent Transactions</span>
+                    <ul>
+                        <li *ngFor="let i of items">
+                            <span><img [src]="i.img " [alt]="i.label"></span>
+                            <div>
+                                <span>{{i.label}}</span>
+                                <p>{{i.date}}</p>
+                            </div>
+                            <span>{{ i.price | currency:'USD':'symbol'}}</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <span>Overview</span>
+                    <div class="card">
+                        <p-chart type="line" [data]="data" [options]="options" />
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <ul>
+                        <li>Recent Transactions</li>
+                        <p-button label="Add New" icon="pi pi-plus" [outlined]="true" />
+                    </ul>
+                    <ul>
+                        <p-dataView #dv [value]="products">
+                            <ng-template pTemplate="list" let-products>
+                                <div class="recent">
+                                    <div *ngFor="let item of products; let first = first">
+                                        <div>
+                                            <p-avatar [style]="{width: '35px', height: '35px', 'object-fit': 'cover'}"
+                                                class="block w-full"
+                                                [image]="'https://primefaces.org/cdn/primeng/images/demo/product/' + item.image"
+                                                shape="circle" />
+                                        </div>
+                                        <span>{{ item.name }}</span>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </p-dataView>
+                    </ul>
+                    <div>
+                        <input pInputText type="text">
+                        <button pButton label="Send"></button>
+                    </div>
+                </div>
+                <div>
+                    <span>Monthly Payments</span>
+                    <p-dataView #dv [value]="products">
+                        <ng-template pTemplate="header">
+                            <ul style="background-color: #fff; border-bottom: solid 1px #eeeeee; display: flex;">
+                                <li
+                                    style="padding: 10.5px 14px; line-height: 21px; font-size: 14px; color: #334155; flex: 0 0 auto; width: 25%; font-weight: 600;">
+                                    Name
+                                </li>
+                                <li
+                                    style="padding: 10.5px 14px; line-height: 21px; font-size: 14px; color: #334155; flex: 0 0 auto; width: 25%; font-weight: 600;">
+                                    Category
+                                </li>
+                                <li
+                                    style="padding: 10.5px 14px; line-height: 21px; font-size: 14px; color: #334155; flex: 0 0 auto; width: 25%; font-weight: 600;">
+                                    price
+                                </li>
+                                <li
+                                    style="padding: 10.5px 14px; line-height: 21px; font-size: 14px; color: #334155; flex: 0 0 auto; width: 25%; font-weight: 600;">
+                                    Status
+                                </li>
+                            </ul>
+                        </ng-template>
+                        <ng-template pTemplate="list" let-products>
+                            <div class="recent-sales">
+                                <div *ngFor="let item of products; let first = first">
+                                    <span>{{ item.name }}</span>
+                                    <span>{{ item.category}}</span>
+                                    <span>{{ item.price | currency:'USD':'symbol':'1.2-2' }}</span>
+                                    <span>
+                                        <div [class.in-stock]="item.inventoryStatus === 'INSTOCK'"
+                                            [class.low-stock]="item.inventoryStatus === 'LOWSTOCK'"
+                                            [class.out-of-stock]="item.inventoryStatus === 'OUTOFSTOCK'">
+                                            {{ item.inventoryStatus
+                                            }}
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </p-dataView>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

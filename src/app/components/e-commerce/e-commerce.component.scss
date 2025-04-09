@@ -60,8 +60,6 @@
                 flex: 0 0 auto;
                 background-color: #fff;
                 padding: 28px;
-                min-height: 468px;
-                max-height: 468px;
                 text-align: center;
 
                 &>div {
@@ -117,6 +115,46 @@
 
             &>li:nth-child(1) {
                 width: calc(60% - 16.8px);
+                height: fit-content;
+
+                &>div:nth-of-type(1) {
+                    margin-bottom: 14px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    &>span {
+                        display: block;
+                        font-size: 17.5px;
+                        line-height: 24.5px;
+                        font-weight: 600;
+                    }
+
+                    &>div {
+                        height: 37px;
+
+                        & input {
+                            border-radius: 17.5px;
+                        }
+
+                        &>label {
+                            cursor: pointer;
+                            width: 35px;
+                            height: 35px;
+                            border-radius: 50%;
+                            margin: 0 14px;
+                            text-align: center;
+                            line-height: 35px;
+                            background-color: var(--hover-color);
+                            color: #fff;
+
+                            &:hover {
+                                opacity: 0.8;
+                            }
+                        }
+                    }
+
+                }
             }
 
             &>li:nth-child(2) {
@@ -124,6 +162,71 @@
             }
         }
     }
+}
+
+::ng-deep .p-paginator {
+    padding: 7px 14px;
+}
+
+::ng-deep .recent-sales {
+    &>div {
+        display: flex;
+
+        &>span {
+            display: flex;
+            align-items: center;
+            flex: 0 0 auto;
+            width: 20%;
+            box-sizing: border-box;
+            padding: 10.5px 14px;
+            min-height: 64px;
+            font-weight: 500;
+            color: #334155;
+            line-height: 21px;
+            border-bottom: solid 2px var(--background-color);
+        }
+
+        &>span:nth-last-of-type(2) {
+            &>div {
+                font-weight: 700;
+                line-height: 18.375px;
+                font-size: 12.25px;
+                padding: 3.5px 7px;
+                border-radius: 8px;
+            }
+        }
+
+        &>span:last-child {
+            justify-content: flex-end;
+
+            &>i {
+                width: 35px;
+                line-height: 35px;
+                height: 35px;
+                font-size: 14px;
+                font-weight: 500;
+                color: var(--hover-color);
+                border: solid 2px var(--background-color);
+                border-radius: 50%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.in-stock {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.out-of-stock {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.low-stock {
+    background-color: #ffedd5;
+    color: #c2410c;
 }
 
 ::ng-deep .p-dropdown {
@@ -139,5 +242,41 @@
         height: 37px;
         padding: 7px 10.5px;
         line-height: 21px;
+    }
+}
+
+::ng-deep .p-data-view {
+    & .p-rating .p-rating-item.p-rating-item-active .p-rating-icon {
+        color: var(--hover-color)
+    }
+
+    &>div {
+        padding: 14px;
+
+        &>div {
+            display: flex;
+            flex-direction: row;
+
+            &>div {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+
+                &>div {
+                    margin-left: 14px;
+                    line-height: 24.5px;
+                    font-size: 15.75px;
+                    font-weight: 600;
+                    color: var(--font-color);
+
+                    &>span {
+                        display: block;
+                        margin-bottom: 3.5px;
+                    }
+
+                }
+            }
+        }
     }
 }

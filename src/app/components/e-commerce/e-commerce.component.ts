@@ -14,21 +14,7 @@ export class ECommerceComponent implements OnInit {
     this.productService.getProducts().then((data) => (this.products = data));
     this.productService.getProductsMini().then((data) => (this.topProducts = data));
   }
-  getSeverity(product: any) {
-    switch (product.inventoryStatus) {
-      case 'INSTOCK':
-        return 'success';
-
-      case 'LOWSTOCK':
-        return 'warning';
-
-      case 'OUTOFSTOCK':
-        return 'danger';
-
-      default:
-        return undefined;
-    }
-  };
+  onUpload() { }
   options: any;
   data: any;
   value: number = 67;

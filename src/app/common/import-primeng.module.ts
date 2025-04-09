@@ -17,6 +17,15 @@ import { KnobModule } from 'primeng/knob';
 import { DropdownModule } from 'primeng/dropdown';
 import { DataViewModule } from 'primeng/dataview';
 import { TagModule } from 'primeng/tag';
+import { RatingModule } from 'primeng/rating';
+import { FileUploadModule } from 'primeng/fileupload';
+import { ToastModule } from 'primeng/toast';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from '../app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { TooltipModule } from 'primeng/tooltip';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -37,7 +46,15 @@ import { TagModule } from 'primeng/tag';
     KnobModule,
     DropdownModule,
     DataViewModule,
-    TagModule
+    TagModule,
+    RatingModule,
+    FileUploadModule,
+    ToastModule,
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    TooltipModule
   ],
   exports: [
     CommonModule,
@@ -57,7 +74,15 @@ import { TagModule } from 'primeng/tag';
     KnobModule,
     DropdownModule,
     DataViewModule,
-    TagModule
+    TagModule,
+    RatingModule,
+    FileUploadModule,
+    ToastModule,
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    TooltipModule
   ]
 })
 export class ImportPrimengModule { }

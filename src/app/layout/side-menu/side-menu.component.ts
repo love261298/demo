@@ -1,4 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-side-menu',
@@ -6,6 +7,7 @@ import { Component, inject, OnInit } from '@angular/core';
   styleUrl: './side-menu.component.scss'
 })
 export class SideMenuComponent implements OnInit {
+  private router = inject(Router)
   model: any[] = [];
   isOpen: boolean = true;
   ngOnInit() {
@@ -14,9 +16,15 @@ export class SideMenuComponent implements OnInit {
         label: 'DASHBOARDS',
         items: [
           {
-            label: 'E-commerce', icon: 'pi pi-fw pi-home'
+            label: 'E-commerce', icon: 'pi pi-fw pi-home', command: () => {
+              this.router.navigate(['/E-Commerce']);
+            }
           },
-          { label: 'Banking', icon: 'pi pi-fw pi-image' },
+          {
+            label: 'Banking', icon: 'pi pi-fw pi-image', command: () => {
+              this.router.navigate(['/Banking']);
+            }
+          },
         ]
       },
       {
