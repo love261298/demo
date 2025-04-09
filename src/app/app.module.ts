@@ -3,8 +3,8 @@ import { AppComponent } from './app.component';
 import { ImportPrimengModule } from './common/import-primeng.module';
 import { MenuModule } from './layout/menu.module';
 import { ECommerceModule } from './components/e-commerce/e-commerce.module';
-import { MessageService } from 'primeng/api';
 import { BankingModule } from './components/banking/banking.module';
+import { BlogListModule } from './components/blog-list/blog-list.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,8 @@ import { BankingModule } from './components/banking/banking.module';
     ImportPrimengModule,
     MenuModule,
     ECommerceModule,
-    BankingModule
+    BankingModule,
+    BlogListModule
   ],
   bootstrap: [AppComponent]
 })

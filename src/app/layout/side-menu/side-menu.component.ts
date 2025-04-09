@@ -37,20 +37,29 @@ export class SideMenuComponent implements OnInit {
               {
                 label: 'List',
                 icon: 'pi pi-fw pi-image',
+                command: () => {
+                  this.router.navigate(['/Blog/List']);
+                }
               },
               {
                 label: 'Detail',
                 icon: 'pi pi-fw pi-list',
+                command: () => {
+                  this.router.navigate(['/Blog/Detail']);
+                }
               },
               {
                 label: 'Edit',
                 icon: 'pi pi-fw pi-pencil',
+                command: () => {
+                  this.router.navigate(['/Blog/Edit']);
+                }
               }
             ]
           },
-          { label: 'Chat', icon: 'pi pi-fw pi-comments' },
-          { label: 'File', icon: 'pi pi-fw pi-folder' },
-          { label: 'Khanban', icon: 'pi pi-fw pi-sliders-v' },
+          { label: 'Chat', icon: 'pi pi-fw pi-comments', command: () => { this.router.navigate(['/Blog/Edit']); } },
+          { label: 'File', icon: 'pi pi-fw pi-folder', command: () => { this.router.navigate(['/Blog/Edit']); } },
+          { label: 'Khanban', icon: 'pi pi-fw pi-sliders-v', command: () => { this.router.navigate(['/Blog/Edit']); } },
           {
             label: 'Mail',
             icon: 'pi pi-fw pi-envelope',
