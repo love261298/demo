@@ -25,10 +25,32 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from '../app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { TooltipModule } from 'primeng/tooltip';
-
+import { PickListModule } from 'primeng/picklist';
+import { PaginatorModule } from 'primeng/paginator';
+import { ImageModule } from 'primeng/image';
+import { FloatLabelModule } from 'primeng/floatlabel';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { CalendarModule } from 'primeng/calendar';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { SliderModule } from 'primeng/slider';
+import { KeyFilterModule } from 'primeng/keyfilter';
+import { ColorPickerModule } from 'primeng/colorpicker';
+import { CheckboxModule } from 'primeng/checkbox';
+import { ToggleButtonModule } from 'primeng/togglebutton';
+import { InputSwitchModule } from 'primeng/inputswitch';
+import { ListboxModule } from 'primeng/listbox';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { TreeSelectModule } from 'primeng/treeselect';
+import { InputOtpModule } from 'primeng/inputotp';
+import { InputGroupModule } from 'primeng/inputgroup';
+import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
+import { ButtonGroupModule } from 'primeng/buttongroup';
 @NgModule({
   declarations: [],
   imports: [
+    InputGroupAddonModule,
+    InputGroupModule,
+    InputSwitchModule,
     CommonModule,
     AutoCompleteModule,
     ButtonModule,
@@ -54,9 +76,29 @@ import { TooltipModule } from 'primeng/tooltip';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    TooltipModule
+    TooltipModule,
+    PickListModule,
+    PaginatorModule,
+    ImageModule,
+    FloatLabelModule,
+    InputTextareaModule,
+    CalendarModule,
+    InputNumberModule,
+    SliderModule,
+    KeyFilterModule,
+    ColorPickerModule,
+    CheckboxModule,
+    ToggleButtonModule,
+    ListboxModule,
+    MultiSelectModule,
+    TreeSelectModule,
+    InputOtpModule,
+    ButtonGroupModule
   ],
   exports: [
+    InputGroupAddonModule,
+    InputGroupModule,
+    InputSwitchModule,
     CommonModule,
     AutoCompleteModule,
     ButtonModule,
@@ -82,7 +124,24 @@ import { TooltipModule } from 'primeng/tooltip';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    TooltipModule
+    TooltipModule,
+    PickListModule,
+    PaginatorModule,
+    ImageModule,
+    FloatLabelModule,
+    InputTextareaModule,
+    CalendarModule,
+    InputNumberModule,
+    SliderModule,
+    KeyFilterModule,
+    ColorPickerModule,
+    CheckboxModule,
+    ToggleButtonModule,
+    ListboxModule,
+    MultiSelectModule,
+    TreeSelectModule,
+    InputOtpModule,
+    ButtonGroupModule
   ]
 })
 export class ImportPrimengModule { }

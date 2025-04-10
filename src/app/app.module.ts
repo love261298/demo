@@ -5,6 +5,8 @@ import { MenuModule } from './layout/menu.module';
 import { ECommerceModule } from './components/e-commerce/e-commerce.module';
 import { BankingModule } from './components/banking/banking.module';
 import { BlogListModule } from './components/blog-list/blog-list.module';
+import { BlogDetailModule } from './components/blog-detail/blog-detail.module';
+import { InputModule } from './components/input/input.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { BlogListModule } from './components/blog-list/blog-list.module';
     MenuModule,
     ECommerceModule,
     BankingModule,
-    BlogListModule
+    BlogListModule,
+    BlogDetailModule,
+    InputModule,
   ],
   bootstrap: [AppComponent]
 })

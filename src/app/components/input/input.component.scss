@@ -1,0 +1,10 @@
+.input-type,
+.input-group {
+    display: flex;
+    gap: 28px;
+
+    &>div {
+        flex: 0 0 auto;
+        width: calc(50% - 14px);
+    }
+}

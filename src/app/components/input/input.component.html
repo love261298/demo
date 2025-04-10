@@ -1,0 +1,241 @@
+<div class="input-type h-fit">
+    <div>
+        <div class="bg-white border-round-2xl p-5 flex flex-column gap-4 mb-6">
+            <span class="font-semibold text-3xl line-height-3">
+                InputText
+            </span>
+            <div class="p-fluid flex gap-3">
+                <input type="text" pInputText placeholder="Default">
+                <input type="text" pInputText placeholder="Disabled" [disabled]="true" variant="filled">
+                <input type="text" pInputText placeholder="Invalid" class="ng-invalid ng-dirty">
+            </div>
+            <span class="font-semibold text-3xl line-height-3">
+                Icons
+            </span>
+            <div class="p-fluid grid gap-3">
+                <div class="col">
+                    <p-iconField iconPosition="left">
+                        <p-inputIcon styleClass="pi pi-user" />
+                        <input type="text" pInputText placeholder="Search" />
+                    </p-iconField>
+                </div>
+                <div class="col">
+                    <p-iconField iconPosition="right">
+                        <p-inputIcon styleClass="pi pi-search" />
+                        <input type="text" pInputText placeholder="Search" />
+                    </p-iconField>
+                </div>
+            </div>
+            <span class="font-semibold text-3xl line-height-3">
+                Float Label
+            </span>
+            <div class="p-fluid">
+                <p-floatLabel>
+                    <input id="username" type="text" pInputText [(ngModel)]="value" />
+                    <label for="username">Username</label>
+                </p-floatLabel>
+            </div>
+            <span class="font-semibold text-3xl line-height-3">
+                Textarea
+            </span>
+            <div class="p-fluid">
+                <textarea id="textarea" rows="5" placeholder="Your Message" cols="30" pInputTextarea [(ngModel)]="value"
+                    [autoResize]="true"></textarea>
+            </div>
+            <span class="font-semibold text-3xl line-height-3">
+                AutoComplete
+            </span>
+            <div class="p-fluid">
+                <p-autoComplete placeholder="Search" [(ngModel)]="selectedItem" [suggestions]="suggestions"
+                    (completeMethod)="search($event)" />
+            </div>
+            <span class="font-semibold text-3xl line-height-3">
+                Calendar
+            </span>
+            <div class="p-fluid">
+                <p-calendar [(ngModel)]="value" [showButtonBar]="true" />
+            </div>
+            <span class="font-semibold text-3xl line-height-3">
+                InputNumber
+            </span>
+            <div class="p-fluid">
+                <p-inputNumber inputId="integeronly" [(ngModel)]="value" />
+            </div>
+        </div>
+        <div class="bg-white border-round-2xl p-5 flex flex-column gap-4">
+            <span class="font-semibold text-3xl line-height-3">
+                Slider
+            </span>
+            <div class="p-fluid grid gap-3">
+                <input type="text" pInputText [(ngModel)]="slider" class="w-full mb-3" />
+                <p-slider [(ngModel)]="slider" class="w-full" />
+            </div>
+            <ul class="flex list-none">
+                <li class="col">
+                    <div class="font-semibold text-3xl line-height-3 mb-3">
+                        Rating
+                    </div>
+                    <div>
+                        <p-rating [(ngModel)]="value" [cancel]="false" />
+                    </div>
+                </li>
+                <li class="col">
+                    <div class="font-semibold text-3xl line-height-3 mb-3">ColorPicker
+                    </div>
+                    <div>
+                        <p-colorPicker [(ngModel)]="colorPicker" />
+                    </div>
+                </li>
+            </ul>
+            <span class="font-semibold text-3xl line-height-3">
+                Knob
+            </span>
+            <div class="p-fluid grid gap-3">
+                <p-knob [(ngModel)]="slider" valueTemplate="{value}%" />
+            </div>
+        </div>
+    </div>
+    <div>
+        <div>
+            <div class="bg-white p-5 border-round-2xl p-5 flex flex-column gap-4 mb-6">
+                <span class="font-semibold text-3xl line-height-3">
+                    RadioButton
+                </span>
+                <div class="p-fluid flex gap-7">
+                    <div class="flex align-items-center">
+                        <p-radioButton name="pizza" value="Cheese" variant="filled" [(ngModel)]="ingredient"
+                            inputId="ingredient1" />
+                        <label for="ingredient1" class="ml-2">
+                            Cheese
+                        </label>
+                    </div>
+
+                    <div class="flex align-items-center">
+                        <p-radioButton name="pizza" value="Mushroom" variant="filled" [(ngModel)]="ingredient"
+                            inputId="ingredient2" />
+                        <label for="ingredient2" class="ml-2">
+                            Mushroom
+                        </label>
+                    </div>
+
+                    <div class="flex align-items-center">
+                        <p-radioButton name="pizza" value="Pepper" variant="filled" [(ngModel)]="ingredient"
+                            inputId="ingredient3" />
+                        <label for="ingredient3" class="ml-2">
+                            Pepper
+                        </label>
+                    </div>
+                </div>
+                <span class="font-semibold text-3xl line-height-3">
+                    Checkbox
+                </span>
+                <div class="p-fluid flex gap-7">
+                    <div class="flex align-items-center">
+                        <p-checkbox variant="filled" [(ngModel)]="pizza" label="Cheese" name="pizza" value="Cheese" />
+                    </div>
+                    <div class="flex align-items-center">
+                        <p-checkbox variant="filled" [(ngModel)]="pizza" label="Mushroom" name="pizza"
+                            value="Mushroom" />
+                    </div>
+                    <div class="flex align-items-center">
+                        <p-checkbox variant="filled" [(ngModel)]="pizza" label="Pepper" name="pizza" value="Pepper" />
+                    </div>
+                </div>
+                <span class="font-semibold text-3xl line-height-3">
+                    ToggleSwitch
+                </span>
+                <div class="p-fluid flex gap-7">
+                    <p-inputSwitch [(ngModel)]="checked" />
+                </div>
+            </div>
+        </div>
+        <div class="bg-white p-5 border-round-2xl p-5 flex flex-column gap-4 mb-6">
+            <span class="font-semibold text-3xl line-height-3">
+                Listbox
+            </span>
+            <div class="p-fluid">
+                <p-listbox [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" [filter]="true" />
+            </div>
+            <span class="font-semibold text-3xl line-height-3">
+                Select
+            </span>
+            <div class="p-fluid">
+                <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name"
+                    placeholder="Select a City" />
+            </div>
+            <span class="font-semibold text-3xl line-height-3">
+                MultiSelect
+            </span>
+            <div class="p-fluid">
+                <p-multiSelect [options]="cities" [(ngModel)]="selectedCity" optionLabel="name"
+                    placeholder="Select Cities" />
+            </div>
+            <span class="font-semibold text-3xl line-height-3">
+                TreeSelect
+            </span>
+            <div class="p-fluid">
+                <p-treeSelect class="md:w-20rem w-full" containerStyleClass="w-full" [(ngModel)]="selectedNodes"
+                    [options]="nodes" placeholder="Select Item" />
+            </div>
+        </div>
+        <div class="bg-white p-5 border-round-2xl p-5 flex flex-column gap-4 mb-6">
+            <span class="font-semibold text-3xl line-height-3">
+                ToggleButton
+            </span>
+            <div>
+                <p-toggleButton [(ngModel)]="checked" onLabel="On" offLabel="Off" />
+            </div>
+            <span class="font-semibold text-3xl line-height-3">
+                SelectButton
+            </span>
+            <div>
+                <p-selectButton [options]="paymentOptions" [(ngModel)]="value" [multiple]="true" optionLabel="name"
+                    optionValue="value" />
+            </div>
+        </div>
+        <div class="bg-white p-5 border-round-2xl p-5 flex flex-column gap-4 mb-6">
+            <span class="font-semibold text-3xl line-height-3">
+                InputOtp
+            </span>
+            <div>
+                <p-inputOtp [(ngModel)]="value" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="w-full mt-6">
+    <div class="bg-white p-5 border-round-2xl p-5 flex flex-column gap-4 mb-6">
+        <span class="font-semibold text-3xl line-height-3">
+            InputGroup
+        </span>
+        <div class="flex gap-4 flex-wrap input-group">
+            <div>
+                <p-inputGroup>
+                    <p-inputGroupAddon>
+                        <i class="pi pi-user"></i>
+                    </p-inputGroupAddon>
+                    <input pInputText placeholder="Username" />
+                </p-inputGroup>
+            </div>
+            <div>
+                <p-inputGroup>
+                    <p-inputGroupAddon>$</p-inputGroupAddon>
+                    <input type="text" pInputText placeholder="Price" />
+                    <p-inputGroupAddon>.00</p-inputGroupAddon>
+                </p-inputGroup>
+            </div>
+            <div>
+                <p-inputGroup>
+                    <button type="button" pButton label="Search"></button>
+                    <input type="text" pInputText placeholder="Keyword" />
+                </p-inputGroup>
+            </div>
+            <div>
+                <p-inputGroup>
+                    <p-inputGroupAddon><p-checkbox [(ngModel)]="checked" [binary]="true" /></p-inputGroupAddon>
+                    <input type="text" pInputText placeholder="Username" />
+                </p-inputGroup>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+/* PrimeNG */
+$gutter : 1rem;
+// @import "./assets/layout/layout.scss";
+
 :root {
     font-size: 10px;
     --font-color: rgb(80, 89, 105);
@@ -11,6 +15,7 @@
 * {
     box-sizing: border-box;
     font-size: 14px;
+    user-select: none;
 }
 
 html {

@@ -85,8 +85,8 @@ export class SideMenuComponent implements OnInit {
         label: 'UI KIT',
         items: [
           { label: 'Form Layout', icon: 'pi pi-fw pi-id-card' },
-          { label: 'Input', icon: 'pi pi-fw pi-check-square' },
-          { label: 'Button', icon: 'pi pi-fw pi-box' },
+          { label: 'Input', icon: 'pi pi-fw pi-check-square', command: () => { this.router.navigate(['/input']); } },
+          { label: 'Button', icon: 'pi pi-fw pi-box', command: () => { this.router.navigate(['/button']); } },
           { label: 'Table', icon: 'pi pi-fw pi-table' },
           { label: 'List', icon: 'pi pi-fw pi-list' },
           { label: 'Tre', icon: 'pi pi-fw pi-share-alt' },
